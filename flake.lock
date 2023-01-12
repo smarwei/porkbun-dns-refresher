@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1659446231,
+        "narHash": "sha256-hekabNdTdgR/iLsgce5TGWmfIDZ86qjPhxDg/8TlzhE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "eabc38219184cc3e04a974fe31857d8e0eac098d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-21.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "pbddns": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1668469222,
+        "narHash": "sha256-wCI3nRh3iMkIE3p4SNfri3o9IY0+6Vskfry1Q/8pXso=",
+        "owner": "skoobasteeve",
+        "repo": "porkbun-dynamic-dns-python",
+        "rev": "19c37dea3e113dfa452d10b04e60dfc892fffa16",
+        "type": "github"
+      },
+      "original": {
+        "owner": "skoobasteeve",
+        "ref": "ddns-no-delete-unless-change",
+        "repo": "porkbun-dynamic-dns-python",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "pbddns": "pbddns"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

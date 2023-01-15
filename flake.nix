@@ -1,5 +1,5 @@
 {
-  description = "Script to refresh the Quantum Go DNS server";
+  description = "Porkbun's minimalist dynamic DNS client.";
 
   inputs.nixpkgs.url = github:NixOS/nixpkgs/nixos-21.11;
   inputs.pbddns.url = github:skoobasteeve/porkbun-dynamic-dns-python/ddns-no-delete-unless-change;
@@ -15,8 +15,7 @@
         py3 = python3.withPackages (p: [p.requests]);
         buildInputs = [ py3 refreshDns ];
         refreshDns = pkgs.writeShellScriptBin "porkbun-ddns" ''
-          ${py3}/bin/python3 ${pbddns}/porkbun-ddns.py $1 quantumgo.net
-          ${py3}/bin/python3 ${pbddns}/porkbun-ddns.py $1 quantumgo.net test
+            ${py3}/bin/python3 ${pbddns}/porkbun-ddns.py $1 $2 $3
         '';
         # buildPhase = "gcc -o hello ./hello.c";
         installPhase = ''
